@@ -1,0 +1,12 @@
+.EditForm {
+  flex-direction: column;
+  margin: 100px auto;
+
+  & .input {
+    margin-block: rem(10px);
+    height: 30px;
+    width: rem(250px);
+    // margin: rem(10px);
+    // width: 70px;
+  }
+}

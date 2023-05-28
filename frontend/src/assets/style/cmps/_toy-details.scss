@@ -1,0 +1,15 @@
+.toy-details {
+  text-align: center;
+
+  & h1 {
+    font-size: rem(27px);
+  }
+
+  & img {
+    height: 250px;
+  }
+
+  & h5 {
+    font-size: rem(21px);
+  }
+}

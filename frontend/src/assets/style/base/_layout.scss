@@ -1,0 +1,48 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: $layoutPadding, 1fr, $layoutPadding;
+
+  > * {
+    &.full {
+      grid-column: 1/-1;
+    }
+
+    &:not(.full) {
+      grid-column: 2;
+    }
+  }
+
+  @include for-mobile-layout {
+  }
+
+  @include for-narrow-layout {
+    grid-template-columns:
+      minmax($layoutPadding, 1fr) minmax(auto, $break-narrow)
+      minmax($layoutPadding, 1fr);
+  }
+
+  @include for-normal-layout {
+    grid-template-columns:
+      minmax($layoutPadding, 1fr) minmax(auto, $break-normal)
+      minmax($layoutPadding, 1fr);
+  }
+
+  @include for-wide-layout {
+    grid-template-columns:
+      minmax($layoutPadding, 1fr) minmax(auto, $break-wide)
+      minmax($layoutPadding, 1fr);
+  }
+}
+
+// .container {
+//   max-width: 800px;
+//   padding: 1em;
+//   margin: auto;
+// }
+
+// footer {
+//   background-color: var(--clr1);
+//   color: var(--clr1bg);
+//   padding: 1em;
+//   text-align: center;
+// }
